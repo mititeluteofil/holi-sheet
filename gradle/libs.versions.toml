@@ -1,0 +1,48 @@
+[versions]
+agp = "8.3.0"
+kotlin = "1.9.22"
+ksp = "1.9.22-1.0.17"
+compose-bom = "2024.02.01"
+lifecycle = "2.7.0"
+navigation = "2.7.7"
+room = "2.6.1"
+hilt = "2.51"
+hilt-navigation = "1.2.0"
+camerax = "1.3.2"
+mlkit-text = "16.0.0"
+coil = "2.6.0"
+coroutines = "1.8.0"
+activity-compose = "1.8.2"
+
+[libraries]
+compose-bom                 = { group = "androidx.compose",           name = "compose-bom",              version.ref = "compose-bom" }
+compose-ui                  = { group = "androidx.compose.ui",         name = "ui" }
+compose-material3           = { group = "androidx.compose.material3",  name = "material3" }
+compose-material-icons      = { group = "androidx.compose.material",   name = "material-icons-extended" }
+compose-tooling-preview     = { group = "androidx.compose.ui",         name = "ui-tooling-preview" }
+compose-tooling             = { group = "androidx.compose.ui",         name = "ui-tooling" }
+activity-compose            = { group = "androidx.activity",            name = "activity-compose",         version.ref = "activity-compose" }
+navigation-compose          = { group = "androidx.navigation",          name = "navigation-compose",        version.ref = "navigation" }
+lifecycle-viewmodel         = { group = "androidx.lifecycle",           name = "lifecycle-viewmodel-compose", version.ref = "lifecycle" }
+lifecycle-runtime           = { group = "androidx.lifecycle",           name = "lifecycle-runtime-ktx",     version.ref = "lifecycle" }
+room-runtime                = { group = "androidx.room",                name = "room-runtime",              version.ref = "room" }
+room-ktx                    = { group = "androidx.room",                name = "room-ktx",                  version.ref = "room" }
+room-compiler               = { group = "androidx.room",                name = "room-compiler",             version.ref = "room" }
+hilt-android                = { group = "com.google.dagger",            name = "hilt-android",              version.ref = "hilt" }
+hilt-compiler               = { group = "com.google.dagger",            name = "hilt-android-compiler",     version.ref = "hilt" }
+hilt-navigation             = { group = "androidx.hilt",                name = "hilt-navigation-compose",   version.ref = "hilt-navigation" }
+camerax-core                = { group = "androidx.camera",              name = "camera-core",               version.ref = "camerax" }
+camerax-camera2             = { group = "androidx.camera",              name = "camera-camera2",            version.ref = "camerax" }
+camerax-lifecycle           = { group = "androidx.camera",              name = "camera-lifecycle",          version.ref = "camerax" }
+camerax-view                = { group = "androidx.camera",              name = "camera-view",               version.ref = "camerax" }
+mlkit-text-recognition      = { group = "com.google.mlkit",            name = "text-recognition",          version.ref = "mlkit-text" }
+mlkit-image-labeling        = { group = "com.google.mlkit",            name = "image-labeling",            version = "17.0.9" }
+coil-compose                = { group = "io.coil-kt",                   name = "coil-compose",              version.ref = "coil" }
+coroutines-android          = { group = "org.jetbrains.kotlinx",        name = "kotlinx-coroutines-android", version.ref = "coroutines" }
+coroutines-play-services    = { group = "org.jetbrains.kotlinx",        name = "kotlinx-coroutines-play-services", version.ref = "coroutines" }
+
+[plugins]
+android-application = { id = "com.android.application",          version.ref = "agp" }
+kotlin-android      = { id = "org.jetbrains.kotlin.android",      version.ref = "kotlin" }
+hilt                = { id = "com.google.dagger.hilt.android",    version.ref = "hilt" }
+ksp                 = { id = "com.google.devtools.ksp",           version.ref = "ksp" }

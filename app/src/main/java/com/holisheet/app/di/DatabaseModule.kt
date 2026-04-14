@@ -1,0 +1,33 @@
+package com.holisheet.app.di
+
+import android.content.Context
+import androidx.room.Room
+import com.holisheet.app.data.db.AppDatabase
+import com.holisheet.app.data.db.dao.InventoryDao
+import com.holisheet.app.data.db.dao.InventoryItemDao
+import com.holisheet.app.data.db.dao.LabelDao
+import dagger.Module
+import dagger.Provides
+import dagger.hilt.InstallIn
+import dagger.hilt.android.qualifiers.ApplicationContext
+import dagger.hilt.components.SingletonComponent
+import javax.inject.Singleton
+
+@Module
+@InstallIn(SingletonComponent::class)
+object DatabaseModule {
+
+    @Provides
+    @Singleton
+    fun provideAppDatabase(@ApplicationContext context: Context): AppDatabase =
+        Room.databaseBuilder(context, AppDatabase::class.java, "holisheet.db").build()
+
+    @Provides
+    fun provideInventoryDao(db: AppDatabase): InventoryDao = db.inventoryDao()
+
+    @Provides
+    fun provideInventoryItemDao(db: AppDatabase): InventoryItemDao = db.inventoryItemDao()
+
+    @Provides
+    fun provideLabelDao(db: AppDatabase): LabelDao = db.labelDao()
+}
